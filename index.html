@@ -38,7 +38,7 @@
 
     /* Align content to the left */
     .content {
-      padding-left: 0; /* Remove padding from content */
+      padding-left: 10%; /* Add left padding */
       text-align: left;
     }
 
@@ -71,32 +71,31 @@
       margin-right: auto; /* Center the line */
     }
 
-      /* Adjust content for smaller screens */
-      .about-content {
-        padding-left: 50px;
-        padding-right: 50px;
-      }
+    /* Adjust content for smaller screens */
+    .about-content {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 
-      /* Center the content */
-      .content {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
+    /* Center the content */
+    .content {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
-      h2 {
-        padding-left: 0;
-        padding-right: 0;
-      }
+    h2 {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-      /* Adjust the short line to fit on smaller screens */
-      .short-line {
-        width: 80%; /* Make the line shorter for small screens */
-      }
+    /* Adjust the short line to fit on smaller screens */
+    .short-line {
+      width: 80%; /* Make the line shorter for small screens */
+    }
 
-      /* Adjust the contact link position */
-      .contact {
-        text-align: center;
-      }
+    /* Adjust the contact link position */
+    .contact {
+      text-align: center;
     }
 
     @media (max-width: 480px) {
@@ -112,6 +111,17 @@
 
       .about-content {
         font-size: 14px;
+      }
+
+      /* Adjust content for mobile view */
+      .content {
+        padding-left: 5%; /* Decrease left padding for mobile */
+      }
+
+      /* Adjust the about content to make it more readable on small screens */
+      .about-content {
+        padding-left: 5%;
+        padding-right: 5%;
       }
     }
   </style>
