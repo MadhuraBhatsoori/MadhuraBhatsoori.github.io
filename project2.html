@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Review Chatbot</title>
+  <title>AI Speech Evaluation System</title>
   <style>
     body {
       margin: 0;
-      font-family: Roboto, sans-serif;
-      background-color: white;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
     }
 
     /* Navbar styles */
     .navbar {
-      background-color: black;
+      background-color: #333;
       overflow: hidden;
       text-align: center;
+      padding: 10px 0;
     }
 
     .navbar a {
-      display: inline-block;
       color: #dbdbdb;
       padding: 14px 20px;
       text-decoration: none;
       font-size: 17px;
-    }
-
-    .navbar a:nth-child(1),
-    .navbar a:nth-child(2) {
-      margin: 0 10px;
+      transition: color 0.3s ease;
     }
 
     .navbar a:hover {
@@ -38,66 +36,78 @@
     /* Project Section */
     .project-section {
       padding: 20px;
-      max-width: 800px;
-      margin: 20px auto;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .project-header {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       text-align: center;
     }
 
     /* YouTube video embed */
     .video-container {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .video-container iframe {
+      border: none;
+      border-radius: 8px;
+      max-width: 100%;
+    }
+
+    /* Common section styles */
+    .section {
+      margin: 20px 0;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+      color: #555;
     }
 
     /* Contributions listing */
     .contributions {
-      margin: 20px 0;
-      font-size: 16px;
+      margin-top: 30px;
     }
 
-    /* Skills & Technologies section */
-    .skills {
-      font-size: 16px;
-      margin: 20px 0;
+    /* List style for skills & technologies */
+    ul {
+      list-style-type: disc;
+      margin: 10px 0 20px 20px;
     }
 
-    /* Future vision */
-    .future-vision {
+    li {
       font-size: 16px;
-      margin: 20px 0;
+      margin: 8px 0;
+      color: #444;
     }
 
-    /* Inspiration section */
-    .inspiration {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-
-    /* What it does section */
-    .what-it-does {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-
-    /* How we built it section */
-    .how-we-built {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-
-    /* Results section */
-    .results {
-      font-size: 16px;
-      margin: 20px 0;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #888;
+      background-color: #333;
+      color: white;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
@@ -105,23 +115,24 @@
     <a href="index.html">Home</a>
     <a href="project.html">Projects</a>
   </div>
- 
+
   <!-- Project Section -->
   <div class="project-section">
-    <div class="project-header">AI speech evaluation system</div> 
+    <div class="project-header">AI Speech Evaluation System</div>
+
     <!-- YouTube Video Embed -->
     <div class="video-container">
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/fNiZ1P9HDeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/fNiZ1P9HDeA" allowfullscreen></iframe>
+    </div>
 
     <!-- Contributions Listing -->
-    <div class="contributions">
+    <div class="section contributions">
       <h4>Contributions</h4>
-      <p>This is an individual project created for MongoDB AI hackathon: Code for a cause. [GitHub]</p>
+      <p>This is an individual project created for MongoDB AI Hackathon: Code for a Cause. <a href="#">[GitHub]</a></p>
     </div>
 
     <!-- Skills & Technologies -->
-    <div class="skills">
+    <div class="section skills">
       <h4>Skills & Technologies Used</h4>
       <ul>
         <li>MongoDB Atlas</li>
@@ -133,32 +144,30 @@
     </div>
 
     <!-- Inspiration Section -->
-    <div class="inspiration">
+    <div class="section inspiration">
       <h4>Inspiration</h4>
-      <p>In today’s fast-paced dining culture, customers often want quick and reliable insights into a restaurant’s best dishes, rather than scrolling through endless reviews. Restaurant owners and managers similarly face challenges in processing hundreds of customer reviews to understand their strengths and pain points. While reviews are full of valuable information, finding and processing that information can be tedious. This application addresses the gap by allowing users to interact directly with restaurant reviews to uncover popular dishes, access quality, and make more informed dining decisions. The target audience includes food enthusiasts, restaurant owners, bloggers, and travellers looking for quick, data-driven dining insights.</p>
+      <p>In today’s fast-paced dining culture, customers often want quick and reliable insights into a restaurant’s best dishes. Restaurant owners and managers similarly face challenges in processing hundreds of customer reviews. This application allows users to interact directly with reviews to uncover popular dishes and make informed dining decisions.</p>
     </div>
 
     <!-- What it does Section -->
-    <div class="what-it-does">
+    <div class="section what-it-does">
       <h4>What it does</h4>
-      <p>Our application helps people to interact with restaurant reviews by using redpanda connect (open AI) to analyse and extract meaningful insights from customer experiences. User needs to enter restaurant name and simply chat with the app to discover top-rated menu items, get personalised dish recommendations, and understand the overall dining experience at any restaurant. For restaurant owners, it transforms scattered feedback into actionable business intelligence, tracking trends and customer satisfaction over time.</p>
+      <p>Our application allows users to explore restaurant reviews using Redpanda Connect (OpenAI) to extract meaningful insights. Simply enter the restaurant's name, and the app will show top-rated menu items, personalized dish recommendations, and customer satisfaction trends.</p>
     </div>
 
     <!-- How We Built It Section -->
-    <div class="how-we-built">
+    <div class="section how-we-built">
       <h4>How we built it</h4>
-      <p>The application uses a combination of redpanda, mongoDB, openAI, pinecone, and react frontend to deliver real-time insights from customer reviews. MongoDB stores the raw reviews, which flow seamlessly into redpanda Connect, ensuring that new data is always available for processing without any interruptions. Once connected, Redpanda's serverless technology streams and processes these reviews in real-time, making sure every new piece of feedback is immediately accessible for insight generation.</p>
-      <p>OpenAI embedding is used to transform reviews into vector embeddings, capturing the essence of the feedback. These embeddings are then stored in pinecone, a vector database that makes finding similar reviews a quick and efficient process. When users search for something specific, like the best dish recommendations or details about the dining experience, pinecone instantly retrieves reviews that match the meaning of their query, not just the words.</p>
-      <p>The react frontend has a chat interface where users can freely explore the insights hidden within the reviews. They can ask questions, look for suggestions about different menu items or experiences. With each query, the frontend sends the request which is sent to openAI and pinecone to deliver the most relevant, meaningful responses, in just a few seconds.</p>
+      <p>The application integrates Redpanda, MongoDB, OpenAI, Pinecone, and React. Reviews are stored in MongoDB, processed through Redpanda for real-time analysis. OpenAI transforms reviews into vector embeddings, which are stored in Pinecone for efficient retrieval of relevant reviews.</p>
     </div>
 
     <!-- Results Section -->
-    <div class="results">
+    <div class="section results">
       <h4>Results & Future scope</h4>
-      <p>Users can now make informed decisions quickly, enhancing their dining experiences and helping restaurant managers understand customer preferences for menu improvements. This approach can be replicated for other types of reviews, offering similar value across industries such as hospitality, retail, and e-commerce.</p>
+      <p>Users can make informed dining decisions quickly. This application can be expanded to other industries, such as retail or e-commerce, for similar review analysis and insight extraction.</p>
     </div>
-
   </div>
 
 </body>
+
 </html>
