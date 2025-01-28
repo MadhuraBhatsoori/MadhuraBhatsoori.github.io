@@ -149,26 +149,31 @@
 
     <!-- Inspiration Section -->
     <div class="section inspiration">
-      <h4>Inspiration</h4>
-      <p>In today’s fast-paced dining culture, customers often want quick and reliable insights into a restaurant’s best dishes. Restaurant owners and managers similarly face challenges in processing hundreds of customer reviews. This application allows users to interact directly with reviews to uncover popular dishes and make informed dining decisions.</p>
+        <h4>Inspiration</h4>
+        <p>In today's competitive world, effective communication is one of the most crucial skills for leadership and career growth. Yet many women face barriers in expressing their ideas confidently, clearly, and with the structure needed to influence decision-making and leadership dynamics. To address this, we built an AI-powered real-time speech analysis tool that provides actionable insights to improve clarity, structure, and confidence in communication. This tool empowers users by giving detailed feedback, helping them grow their leadership presence and career potential. By delivering personalised, data-driven guidance, the tool aims to provide support to overcome communication challenges and thrive in leadership roles.</p>
     </div>
 
     <!-- What it does Section -->
     <div class="section what-it-does">
-      <h4>What it does</h4>
-      <p>Our application allows users to explore restaurant reviews using Redpanda Connect (OpenAI) to extract meaningful insights. Simply enter the restaurant's name, and the app will show top-rated menu items, personalized dish recommendations, and customer satisfaction trends.</p>
+        <h4>What it does</h4>
+        <p>The tool provides users with the ability to refine their communication skills through a dynamic, interactive experience. Here's how it works:</p>
+        <ul>
+            <li><strong>Start Recording:</strong> The user begins by recording their speech on any topic. This can be for a presentation, a meeting rehearsal, or simply practicing everyday conversations.</li>
+            <li><strong>Instant Feedback on Filler Words:</strong> While speaking, the tool monitors for the use of filler words (such as "um," "uh," "like," and "you know"). Whenever filler words are detected repeatedly, the speaker icon changes from green to red, giving an immediate visual cue that the user is relying on fillers too often.</li>
+            <li><strong>Recording Completed:</strong> Once the user finishes speaking, the full speech recording is sent to Gemini for an in-depth analysis of several key aspects.</li>
+        </ul>
     </div>
 
     <!-- How We Built It Section -->
     <div class="section how-we-built">
-      <h4>How we built it</h4>
-      <p>The application integrates Redpanda, MongoDB, OpenAI, Pinecone, and React. Reviews are stored in MongoDB, processed through Redpanda for real-time analysis. OpenAI transforms reviews into vector embeddings, which are stored in Pinecone for efficient retrieval of relevant reviews.</p>
+        <h4>How we built it</h4>
+        <p>The tool integrates frontend and backend technologies. HTML and CSS handle the frontend, creating a responsive interface. Node.js processes audio data and sends it for real-time filler word analysis, while MongoDB Atlas stores embeddings for fast searches. Gemini provides detailed analysis on sentence structure, grammar, clarity, and confidence, delivered via a Flask API.</p>
     </div>
 
     <!-- Results Section -->
     <div class="section results">
-      <h4>Results & Future scope</h4>
-      <p>Users can make informed dining decisions quickly. This application can be expanded to other industries, such as retail or e-commerce, for similar review analysis and insight extraction.</p>
+        <h4>Results & Future Scope</h4>
+        <p>The tool helps users improve their communication skills with real-time and post-speech feedback. The future scope includes adding multilingual support, emotion and sentiment analysis, integration with video conferencing platforms, and adaptive learning for more personalized feedback. These enhancements aim to make the tool more inclusive and impactful across diverse professional and personal scenarios.</p>
     </div>
   </div>
 
