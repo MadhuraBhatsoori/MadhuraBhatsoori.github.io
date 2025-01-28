@@ -167,7 +167,21 @@
     <!-- How We Built It Section -->
     <div class="section how-we-built">
         <h4>How we built it</h4>
-        <p>The tool integrates frontend and backend technologies. HTML and CSS handle the frontend, creating a responsive interface. Node.js processes audio data and sends it for real-time filler word analysis, while MongoDB Atlas stores embeddings for fast searches. Gemini provides detailed analysis on sentence structure, grammar, clarity, and confidence, delivered via a Flask API.</p>
+        <p><strong>Frontend (HTML and CSS):</strong> The user interface is built with HTML and CSS, designed to be simple and responsive. The main elements include a Start Recording button, a Speaker Icon (which changes color based on filler word detection). The frontend captures audio from the user’s microphone and sends it to the backend in real-time.</p>
+
+        <p><strong>Backend (Node.js Server):</strong> Node.js manages the incoming audio data from the frontend and facilitates communication between the different services. When the user starts recording, audio data is processed and broken down into small segments that can be analysed for filler words.</p>
+
+        <p><strong>Real-time Analysis:</strong> As the audio segments are received, they are checked against a database of filler word embeddings (stored in MongoDB Atlas). Each incoming audio segment is converted into a vector (embedding) and matched in real-time through a vector search. If filler words are detected frequently, the server sends a signal to the frontend to change the speaker icon from green to red.</p>
+
+        <p><strong>MongoDB Atlas (Database):</strong> MongoDB Atlas is used to store embeddings of common filler words. This allows for fast vector-based searches, helping to identify when the user is using filler words in real-time. Each filler word audio segment is preprocessed and stored as a vector in the database for efficient retrieval and matching.</p>
+
+        <p><strong>Gemini Analysis (Flask API):</strong> After the user completes their recording, the full audio is sent to Gemini, which is connected through a Flask API. Gemini performs a deeper analysis on:</p>
+        <ul>
+            <li><strong>Sentence Structure and Grammar:</strong> It evaluates sentence flow and highlights grammar issues.</li>
+            <li><strong>Speech Clarity and Pace:</strong> It assesses pronunciation clarity and speed.</li>
+            <li><strong>Pitch and Confidence:</strong> It analyzes vocal pitch and tone variation to estimate the confidence level of the speaker.</li>
+        </ul>
+        <p>Once Gemini completes the analysis, it returns a score and detailed feedback.</p>
     </div>
 
     <!-- Results Section -->
