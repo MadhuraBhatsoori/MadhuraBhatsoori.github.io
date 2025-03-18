@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Review Chatbot</title>
+  <title>Chrome Extension Project</title>
   <style>
     body {
       margin: 0;
-      font-family: Roboto, sans-serif;
-      background-color: white;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
     }
 
-    /* Navbar styles */
     .navbar {
       background-color: black;
       overflow: hidden;
@@ -26,139 +26,64 @@
       font-size: 17px;
     }
 
-    .navbar a:nth-child(1),
-    .navbar a:nth-child(2) {
-      margin: 0 10px;
-    }
-
     .navbar a:hover {
       color: #a6a6a6;
     }
 
-    /* Project Section */
     .project-section {
       padding: 20px;
-      max-width: 800px;
-      margin: 20px auto;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .project-header {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       text-align: center;
     }
 
-    /* YouTube video embed */
     .video-container {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    /* Contributions listing */
-    .contributions {
-      margin: 20px 0;
-      font-size: 16px;
-    }
-
-    /* Skills & Technologies section */
-    .skills {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-
-    /* Future vision */
-    .future-vision {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-
-    /* Inspiration section */
-    .inspiration {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-
-    /* What it does section */
-    .what-it-does {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-
-    /* How we built it section */
-    .how-we-built {
-      font-size: 16px;
-      margin: 20px 0;
-    }
-
-    /* Results section */
-    .results {
-      font-size: 16px;
-      margin: 20px 0;
+    .video-container iframe {
+      border: none;
+      border-radius: 8px;
+      max-width: 100%;
     }
   </style>
 </head>
-<body>
 
-  <!-- Navigation Bar -->
+<body>
   <div class="navbar">
     <a href="index.html">Home</a>
     <a href="project.html">Projects</a>
   </div>
 
-  <!-- Project Section -->
   <div class="project-section">
-    <div class="project-header">Review Chatbot</div> 
-    <!-- YouTube Video Embed -->
+    <div class="project-header">Chrome Extension Project</div>
+
     <div class="video-container">
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/91u1f4tidfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/sS-jihENhd0" allowfullscreen></iframe>
+    </div>
+
+    <h4>Inspiration</h4>
+    <p>The Chrome extension was inspired by the need to enhance productivity and focus while working online. Tasks like looking up word meanings, summarizing content, or managing notes often require switching between multiple tabs or tools, leading to disruptions...</p>
+
+    <h4>What it does</h4>
+    <p>The extension integrates powerful features to enhance productivity. It allows users to generate dynamic prompts using the Prompt API...</p>
+
+    <h4>How we built it</h4>
+    <p>This extension was developed using Chrome’s built-in AI APIs to ensure real-time, context-aware processing...</p>
+
+    <h4>Future Scope</h4>
+    <p>The extension has significant potential for expansion to meet diverse user needs. Collaborative features might allow users to share notes or summaries with peers...</p>
   </div>
-
-    <!-- Contributions Listing -->
-    <div class="contributions">
-      <h4>Contributions</h4>
-      <p>This is an individual project created for Redpanda AI hackathon. [GitHub]</p>
-    </div>
-
-    <!-- Skills & Technologies -->
-    <div class="skills">
-      <h4>Skills & Technologies Used</h4>
-      <ul>
-        <li>Redpanda Connect</li>
-        <li>MongoDB</li>
-        <li>OpenAI</li>
-        <li>Pinecone</li>
-        <li>React</li>
-      </ul>
-    </div>
-
-    <!-- Inspiration Section -->
-    <div class="inspiration">
-      <h4>Inspiration</h4>
-      <p>In today’s fast-paced dining culture, customers often want quick and reliable insights into a restaurant’s best dishes, rather than scrolling through endless reviews. Restaurant owners and managers similarly face challenges in processing hundreds of customer reviews to understand their strengths and pain points. While reviews are full of valuable information, finding and processing that information can be tedious. This application addresses the gap by allowing users to interact directly with restaurant reviews to uncover popular dishes, access quality, and make more informed dining decisions. The target audience includes food enthusiasts, restaurant owners, bloggers, and travellers looking for quick, data-driven dining insights.</p>
-    </div>
-
-    <!-- What it does Section -->
-    <div class="what-it-does">
-      <h4>What it does</h4>
-      <p>Our application helps people to interact with restaurant reviews by using redpanda connect (open AI) to analyse and extract meaningful insights from customer experiences. User needs to enter restaurant name and simply chat with the app to discover top-rated menu items, get personalised dish recommendations, and understand the overall dining experience at any restaurant. For restaurant owners, it transforms scattered feedback into actionable business intelligence, tracking trends and customer satisfaction over time.</p>
-    </div>
-
-    <!-- How We Built It Section -->
-    <div class="how-we-built">
-      <h4>How we built it</h4>
-      <p>The application uses a combination of redpanda, mongoDB, openAI, pinecone, and react frontend to deliver real-time insights from customer reviews. MongoDB stores the raw reviews, which flow seamlessly into redpanda Connect, ensuring that new data is always available for processing without any interruptions. Once connected, Redpanda's serverless technology streams and processes these reviews in real-time, making sure every new piece of feedback is immediately accessible for insight generation.</p>
-      <p>OpenAI embedding is used to transform reviews into vector embeddings, capturing the essence of the feedback. These embeddings are then stored in pinecone, a vector database that makes finding similar reviews a quick and efficient process. When users search for something specific, like the best dish recommendations or details about the dining experience, pinecone instantly retrieves reviews that match the meaning of their query, not just the words.</p>
-      <p>The react frontend has a chat interface where users can freely explore the insights hidden within the reviews. They can ask questions, look for suggestions about different menu items or experiences. With each query, the frontend sends the request which is sent to openAI and pinecone to deliver the most relevant, meaningful responses, in just a few seconds.</p>
-    </div>
-
-    <!-- Results Section -->
-    <div class="results">
-      <h4>Results & Future scope</h4>
-      <p>Users can now make informed decisions quickly, enhancing their dining experiences and helping restaurant managers understand customer preferences for menu improvements. This approach can be replicated for other types of reviews, offering similar value across industries such as hospitality, retail, and e-commerce.</p>
-    </div>
-
-  </div>
-
 </body>
+
 </html>
